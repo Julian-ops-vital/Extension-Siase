@@ -1,0 +1,89 @@
+/* content.css */
+/* Esta hoja de estilos se inyectará en la página del SIASE */
+
+body {
+    /* Un color de fondo más suave para destacar el cuadro */
+    background-color: #f0f4f8 !important;
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+}
+
+/* Seleccionamos elementos genéricos que usualmente conforman el cuadro de login. 
+   Una vez que inspeccionemos el código de la página, podemos hacer estos selectores más precisos */
+.login-box,
+table[align="center"] {
+    /* Diseño Glassmorphism (Efecto Vidrio) */
+    background: rgba(0, 34, 68, 0.9) !important;
+    /* Azul UANL oscuro con transparencia */
+    backdrop-filter: blur(10px) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 30px !important;
+    transition: transform 0.3s ease !important;
+}
+
+form:hover,
+.login-box:hover,
+table[align="center"]:hover {
+    transform: translateY(-5px) !important;
+}
+
+/* Damos estilo a los campos de texto del usuario y contraseña */
+input[type="text"],
+input[type="password"],
+select {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    padding: 12px 15px !important;
+    font-size: 14px !important;
+    color: #333 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    transition: all 0.3s ease !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.5) !important;
+    /* Resplandor amarillo/dorado UANL */
+    border-color: #ffcc00 !important;
+    outline: none !important;
+}
+
+/* Modificamos el botón de Entrar */
+input[type="submit"],
+input[type="button"],
+button {
+    background-color: #ffcc00 !important;
+    /* Dorado UANL */
+    color: #002244 !important;
+    /* Azul oscuro UANL para el texto */
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 12px 20px !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+    background-color: #ffd633 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Para ajustar los textos y etiquetas */
+td,
+span,
+font,
+label {
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif !important;
+}

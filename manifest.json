@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "SIASE Mejorado",
+  "version": "1.0",
+  "description": "Mejora la interfaz de inicio de sesión de SIASE.",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://deimos.dgi.uanl.mx/*"
+      ],
+      "all_frames": true,
+      "css": [
+        "content.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
