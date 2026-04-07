@@ -2,6 +2,9 @@
 
 **SIASE Mejorado** es una extensión de navegador (Chrome/Edge) diseñada para modernizar la interfaz del sistema SIASE de la UANL y en un futuro agregar funciones útiles que faciliten la vida de los alumnos. El objetivo principal es renovar la estética visual (actualmente anticuada) y optimizar el flujo de trabajo de los estudiantes al interactuar con el portal de servicios en línea.
 
+## 📋 Tareas
+Para estar al tanto de la tareas actuales para el proyecto visita el documento [TASKS.md](https://github.com/Julian-ops-vital/Extension-Siase/blob/main/TASKS.md)
+
 ## 👥 Para Colaboradores
 
 Si deseas sumarte a mejorar este proyecto, puedes clonar o conectar el repositorio a tu propio equipo siguiendo estos pasos:
