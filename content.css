@@ -14,203 +14,196 @@
 
 body {
     /* Un color de fondo más suave para destacar el cuadro */
-    background-color: var(--bg-panel) !important;
+    background-color: var(--bg-panel);
 }
 
 /* Selecciona el box para dar diseño general */
-.box {
+div.box {
     /* Diseño Glassmorphism (Efecto Vidrio) */
     /* padding: 40px !important; */
-    transition: transform 0.3s ease !important;
-    background: #023234 !important;
-    background: linear-gradient(39deg, rgba(2, 50, 52, 1) 0%, rgba(7, 94, 78, 1) 69%, rgba(16, 158, 112, 1) 90%) !important;
+    transition: transform 0.3s ease;
+    background: #023234;
+    background: linear-gradient(39deg, rgba(2, 50, 52, 1) 0%, rgba(7, 94, 78, 1) 69%, rgba(16, 158, 112, 1) 90%);
     /* Se amplía para dar espacio a la imagen (50/50) */
     /* width: 90% !important; */
 }
 
 /* Al pasar el mouse se levanta */
-.box:hover {
-    transform: translateY(-5px) !important;
+div.box:hover {
+    transform: translateY(-5px);
 }
 
 /* Da estilo al titulos */
-.titulo,
-h3 {
-    background-image: none !important;
-    background-color: var(--bg-principal) !important;
-    color: var(--texto-principal) !important;
+div.titulo,
+div h3 {
+    background-image: none;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
 }
 
 /* Da estilo a tarjeta de datos */
-fieldset {
-    background-color: var(--bg-panel) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    border: 1px solid var(--borde-sutil) !important;
-    border-radius: 20px !important;
-    padding: 10px !important;
-    width: 40% !important;
+form fieldset {
+    background-color: var(--bg-panel);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 20px;
+    padding: 10px;
+    width: 40%;
     /* Ocupa la mitad izquierda */
-    box-sizing: border-box !important;
-    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05), 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05), 0 20px 50px rgba(0, 0, 0, 0.4);
 
     /* Acomodo en 2 columnas */
-    display: grid !important;
-    grid-template-columns: min-content 1fr !important;
-    grid-template-rows: auto auto auto !important;
-    align-items: center !important;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: center;
     /* 28px vertical para hacerlas más anchas, 25px horizontal */
-    gap: 28px 25px !important;
+    gap: 28px 25px;
 }
 
 /* Agrupar labels y textboxes para que estén más juntos */
-.form-group {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 5px !important;
-    margin: 0 !important;
+fieldset div.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    margin: 0;
 }
 
 /* Posición de los form-groups (inputs) */
-fieldset .form-group:nth-child(1) {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
+form fieldset .form-group:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
 }
 
-fieldset .form-group:nth-child(2) {
-    grid-column: 1 !important;
-    grid-row: 2 !important;
+form fieldset .form-group:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
 }
 
-fieldset .form-group:nth-child(3) {
-    grid-column: 1 !important;
-    grid-row: 3 !important;
+form fieldset .form-group:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
 }
 
 /* Último div que contiene el boton y textos y se posiciona a la derecha */
-fieldset>div:last-of-type {
-    grid-column: 2 !important;
-    grid-row: 1 / -1 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-end !important;
+form fieldset>div:last-of-type {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     /* Empuja todo hacia abajo */
-    align-items: start !important;
+    align-items: start;
     /* padding-bottom: 5px !important; */
-    padding-left: 15px !important;
+    padding-left: 15px;
     /* Margen Inferior */
-    height: 100% !important;
-    position: relative !important;
+    height: 100%;
+    position: relative;
 }
 
 /* Linea divisoria con degradado y sombra (efecto neon/vidrio) */
 fieldset>div:last-of-type::before {
-    content: "" !important;
-    position: absolute !important;
-    left: 0 !important;
+    content: "";
+    position: absolute;
+    left: 0;
     /* Empieza un poquito despegado de arriba */
-    top: 5% !important;
+    top: 5%;
     /* Termina un poquito antes de llegar abajo */
-    height: 90% !important;
+    height: 90%;
     /* Grosor de la linea */
-    width: 1.5px !important;
+    width: 1.5px;
 
     /* Degradado: de transparente a verde fime y de vuelta a transparente */
-    background: linear-gradient(to bottom, transparent, var(--color-primario), transparent) !important;
+    background: linear-gradient(to bottom, transparent, var(--color-primario), transparent);
 
     /* Sombra de resplandor usando el mismo tono verde */
-    box-shadow: 0 0 12px var(--color-primario), 0 0 4px var(--color-primario) !important;
+    box-shadow: 0 0 12px var(--color-primario), 0 0 4px var(--color-primario);
 }
 
 
 /* Da estilo a los campos de texto del usuario y contraseña */
-input[type="text"],
-input[type="password"],
-select {
-    background-color: var(--bg-principal) !important;
-    border: 1px solid var(--borde-secundario) !important;
-    border-radius: 20px !important;
-    font-size: 14px !important;
-    color: var(--texto-principal) !important;
-    padding: 6px 15px !important;
-    height: auto !important;
+input[id="cuenta"],
+input[id="pass"],
+select[id="tipo"] {
+    background-color: var(--bg-principal);
+    border: 1px solid var(--borde-secundario);
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--texto-principal);
+    padding: 6px 15px;
+    height: auto;
     /* width: 170px !important; */
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-select:focus {
+input[id="cuenta"]:focus,
+input[id="pass"]:focus,
+select[id="tipo"]:focus {
     /* Resplandor verde de FIME */
-    border-color: var(--color-primario) !important;
+    border-color: var(--color-primario);
     box-shadow: inset 0 0 20px var(--borde-sutil), 0 0 15px var(--borde-secundario);
-    outline: none !important;
+    outline: none;
 }
 
 /* Modificamos el botón de Entrar */
-button {
+div button[type="submit"] {
     /* Verde Fime */
-    background-color: var(--color-primario) !important;
+    background-color: var(--color-primario);
     /* Verde oscuro FIME para el texto */
-    color: var(--bg-principal) !important;
+    color: var(--bg-principal);
     /* Otras propiedades */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-weight: 600 !important;
-    font-size: 15px !important;
-    border: none !important;
-    border-radius: 25px !important;
-    padding: 10px 20px !important;
-    cursor: pointer !important;
-    box-shadow: 0 4px 6px var(--borde-sutil) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px var(--borde-sutil);
     transition: all 0.3s ease;
 
     /* Empuja el botón hacia abajo creando la relación 2/3 */
-    margin: auto 10px !important;
+    margin: auto 10px;
     /* Empuja los textos hacia abajo para que queden en el 1/3 */
     /* margin-bottom: auto !important; */
     /* margin-left: 10px !important; */
-    float: none !important;
-    width: auto !important;
+    float: none;
+    width: auto;
 }
 
-button:hover {
-    transform: translateY(-2px);
+div button[type="submit"]:hover {
+    transform: translateY(-5px);
     box-shadow: 0 0 35px rgba(56, 237, 158, 0.7);
     filter: brightness(1.1);
 }
 
-/* Para ajustar los textos y etiquetas */
-td,
-span,
-font,
-label {
-    color: var(--texto-principal) !important;
-    font-family: 'Inter', sans-serif !important;
-}
-
-label {
-    vertical-align: middle !important;
-    margin-right: 0px !important;
+div.form-group label {
+    vertical-align: middle;
+    margin-right: 0px;
+    color: var(--texto-principal);
+    font-family: 'Inter', sans-serif;
 }
 
 .fas,
-.consulta-matricula {
-    color: var(--color-primario) !important;
+a.consulta-matricula {
+    color: var(--color-primario);
 }
 
-.preguntas-frecuentes {
-    color: var(--texto-principal) !important;
+a.preguntas-frecuentes {
+    color: var(--texto-principal);
 }
 
-.consulta-matricula,
-.preguntas-frecuentes {
-    margin-left: 0 !important;
-    width: 100% !important;
-    text-align: start !important;
-    display: flex !important;
-    font-size: 10px !important;
+a.consulta-matricula,
+a.preguntas-frecuentes {
+    margin-left: 0;
+    width: 100%;
+    text-align: start;
+    display: flex;
+    font-size: 10px;
     /* line-height: 1.3 !important; */
-    margin-top: 5px !important;
+    margin-top: 5px;
 }
