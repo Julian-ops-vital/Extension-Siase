@@ -17,5 +17,15 @@
       ],
       "run_at": "document_end"
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "CodiSaludo.png"
+      ],
+      "matches": [
+        "*://deimos.dgi.uanl.mx/*"
+      ]
+    }
   ]
 }

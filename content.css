@@ -1,20 +1,20 @@
 /* content.css */
 /* Esta hoja de estilos se inyectará en la página del SIASE */
 :root {
-    --bg-principal: #032c21;
-    --bg-panel: #184236;
-    --color-primario: #4FFE93;
-    --color-secundario: #9de3ba;
+    --bg-principal: #0b1121;
+    --bg-panel: #131c31;
+    --color-primario: #007bff;
+    --color-secundario: #82b1ff;
     --texto-principal: #ffffff;
-    --texto-secundario: #9de3ba;
-    --panel-translucido: rgba(24, 66, 54, 0.6);
-    --borde-sutil: rgba(157, 227, 186, 0.3);
-    --borde-secundario: rgba(79, 254, 147, 0.3);
+    --texto-secundario: #a3b8cc;
+    --panel-translucido: rgba(19, 28, 49, 0.6);
+    --borde-sutil: rgba(130, 177, 255, 0.2);
+    --borde-secundario: rgba(0, 123, 255, 0.4);
 }
 
 body {
     /* Un color de fondo más suave para destacar el cuadro */
-    background-color: var(--bg-panel);
+    /* background-color: var(--bg-panel); */
 }
 
 /* Selecciona el box para dar diseño general */
@@ -22,10 +22,60 @@ div.box {
     /* Diseño Glassmorphism (Efecto Vidrio) */
     /* padding: 40px !important; */
     transition: transform 0.3s ease;
-    background: #023234;
-    background: linear-gradient(39deg, rgba(2, 50, 52, 1) 0%, rgba(7, 94, 78, 1) 69%, rgba(16, 158, 112, 1) 90%);
+    background: #0b1121;
+    background: linear-gradient(39deg, rgba(11, 17, 33, 1) 0%, rgba(19, 30, 56, 1) 69%, rgba(30, 58, 95, 1) 90%);
     /* Se amplía para dar espacio a la imagen (50/50) */
-    /* width: 90% !important; */
+    width: 85% !important;
+    max-width: 950px !important;
+    position: relative;
+    padding-bottom: 60px !important;
+    /* Espacio reservado para que el contenido no se tape con el footer absoluto */
+}
+
+/* Footer agregado en la caja principal */
+div.box::after {
+    /* Simbolo de copyright y texto proporcionado */
+    content: "\00A9 SIASE CODI";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom-left-radius: 12px;
+    /* Redondear bordes inferiores para emparejar la caja original */
+    border-bottom-right-radius: 12px;
+}
+
+/* Da estilo general al formulario para que fieldset e imagen convivan */
+form[name="inicio"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 40vh;
+    width: 100%;
+    margin: 0;
+    gap: 20px;
+}
+
+/* Agrega la imagen de CodiSaludo.png dentro del form, ocupando 1/3 */
+form[name=inicio]::after {
+    content: "";
+    /* Ocupa 1/3 del espacio */
+    flex: 1;
+    min-height: 250px;
+    background: url('chrome-extension://__MSG_@@extension_id__/CodiSaludo.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+
+    /* Efecto para que resalte y se alinee como en la imagen */
+    transform: scale(1.2);
+    transform-origin: bottom center;
 }
 
 /* Al pasar el mouse se levanta */
@@ -49,8 +99,10 @@ form fieldset {
     border: 1px solid var(--borde-sutil);
     border-radius: 20px;
     padding: 10px;
-    width: 40%;
-    /* Ocupa la mitad izquierda */
+    width: 66.66%;
+    /* Ocupa 2/3 del espacio */
+    /* Caja ocupa 2/3 (izquierda) */
+    flex: 2;
     box-sizing: border-box;
     box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05), 0 20px 50px rgba(0, 0, 0, 0.4);
 
@@ -177,7 +229,7 @@ div button[type="submit"] {
 
 div button[type="submit"]:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 35px rgba(56, 237, 158, 0.7);
+    box-shadow: 0 0 35px rgba(0, 123, 255, 0.7);
     filter: brightness(1.1);
 }
 
